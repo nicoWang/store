@@ -8,7 +8,11 @@
 import Foundation
 import PromiseKit
 
-class StoreAPI {
+protocol StoreApiProtocol: AnyObject {
+    func requestStore() -> Promise<Store>
+}
+
+class StoreAPI: StoreApiProtocol {
     func requestStore() -> Promise<Store> {
         return Promise<Store> { seal  in
             

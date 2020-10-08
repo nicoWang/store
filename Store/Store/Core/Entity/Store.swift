@@ -22,8 +22,12 @@ struct Section: Codable {
 struct Item: Codable {
     var detailURL, imageURL: String?
     var brand, title, tags: String?
-    var favoriteCount: Int?
-
+    var favoriteCount: Double?
+        
+    var favoriteCountFormatted: String {
+        return favoriteCount?.kmFormatted ?? "0"
+    }
+    
     enum CodingKeys: String, CodingKey {
         case detailURL = "detailUrl"
         case imageURL = "imageUrl"
