@@ -10,6 +10,7 @@ import PromiseKit
 
 protocol ListInteractorProtocol: AnyObject {
     func requestStore() -> Promise<Store>
+    func requestDetail(with url: String) -> Promise<ItemDetail>
 }
 
 final class ListInteractor: ListInteractorProtocol {
@@ -22,5 +23,9 @@ final class ListInteractor: ListInteractorProtocol {
     
     func requestStore() -> Promise<Store> {
         return api.requestStore()
+    }
+    
+    func requestDetail(with url: String) -> Promise<ItemDetail> {
+        return api.requestDetail(with: url)
     }
 }

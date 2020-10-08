@@ -43,6 +43,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ListCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.selectionStyle = .none
         if let item = presenter?.item(at: indexPath) {
             cell.update(with: item)
         }
@@ -61,9 +62,9 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
         
         let label = UILabel()
-        label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-        label.text = "Notification Times"
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.frame = CGRect.init(x: 25, y: 5, width: headerView.frame.width-30, height: headerView.frame.height-10)
+        label.text = presenter?.title(by: section)
+        label.font = UIFont.boldSystemFont(ofSize: 25)
         
         headerView.addSubview(label)
         
@@ -83,5 +84,6 @@ private extension ListViewController {
         tableView.separatorStyle = .none
         tableView.register(ListCell.self)
         presenter?.bind()
+        self.title = "Title"
     }
 }
