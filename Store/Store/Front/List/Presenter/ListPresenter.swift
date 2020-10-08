@@ -43,8 +43,7 @@ final class ListPresenter: ListPresenterProtocol {
         print(path)
         Loader.sharedLoader.start()
         interactor?.requestDetail(with: path).done { [weak self] detail  in
-            print(detail)
-            print("hola")
+            self?.wireframe?.pushToDetail(with: detail)
         }.ensure {
             Loader.sharedLoader.stop()
         }.catch { error in
