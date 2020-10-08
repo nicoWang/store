@@ -41,7 +41,6 @@ final class ListPresenter: ListPresenterProtocol {
 
     func didSelectItem(at index: IndexPath) {
         guard let item = item(at: index), let path = item.detailURL else { return }
-        print(path)
         Loader.sharedLoader.start()
         interactor?.requestDetail(with: path).done { [weak self] detail  in
             self?.wireframe?.pushToDetail(with: detail)

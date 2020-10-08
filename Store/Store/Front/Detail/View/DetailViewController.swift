@@ -107,13 +107,15 @@ private extension DetailViewController {
     
     func navigationButtons() {
         let likeButton = UIButton()
-        likeButton.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        likeButton.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 60)
+        likeButton.setImage(UIImage(named: "like")?.withRenderingMode(.alwaysTemplate), for: .normal)
         likeButton.tintColor = .black
         likeButton.addTarget(self, action: #selector(like), for: .touchUpInside)
 
         let likeBarButton = UIBarButtonItem(customView: likeButton)
 
         let shareButton = UIButton()
+        shareButton.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 60)
         shareButton.setImage(UIImage(named: "share")?.withRenderingMode(.alwaysTemplate), for: .normal)
         shareButton.tintColor = .black
         shareButton.addTarget(self, action: #selector(share), for: .touchUpInside)
@@ -121,7 +123,8 @@ private extension DetailViewController {
         let shareBarButton = UIBarButtonItem(customView: shareButton)
 
         let backButton = UIButton()
-        backButton.setImage(UIImage(systemName: "chevron.backward")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        backButton.frame = CGRect(x: 0.0, y: 0.0, width: 15, height: 60)
+        backButton.setImage(UIImage(named: "back")?.withRenderingMode(.alwaysTemplate), for: .normal)
         backButton.tintColor = .black
         backButton.addTarget(self, action: #selector(popView), for: .touchUpInside)
         
@@ -129,6 +132,7 @@ private extension DetailViewController {
         
         navigationItem.rightBarButtonItems = [likeBarButton, shareBarButton]
         navigationItem.leftBarButtonItem = backBarButton
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     @objc func popView() {

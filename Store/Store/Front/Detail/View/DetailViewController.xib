@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,10 +29,10 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="866"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41n-nQ-yLp">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41n-nQ-yLp">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySW-Dp-qLs">
@@ -77,7 +78,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="269" id="Zpl-RL-k5U"/>
                                     </constraints>
-                                    <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.</mutableString>
+                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium aenean pharetra magna ac placerat vestibulum lectus. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Viverra aliquet eget sit amet tellus. Sit amet justo donec enim diam vulputate ut. Vel facilisis volutpat est velit egestas dui id. A scelerisque purus semper eget. Volutpat commodo sed egestas egestas fringilla phasellus. Urna molestie at elementum eu facilisis sed. Velit ut tortor pretium viverra. Sit amet volutpat consequat mauris nunc congue. Accumsan in nisl nisi scelerisque eu. Duis at consectetur lorem donec massa sapien faucibus et.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -154,16 +155,14 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="top" secondItem="eO6-pl-TqV" secondAttribute="top" id="4Cp-2y-WWK"/>
-                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="leading" secondItem="eO6-pl-TqV" secondAttribute="leading" id="8bX-FV-bKE"/>
-                        <constraint firstItem="eO6-pl-TqV" firstAttribute="bottom" secondItem="ySW-Dp-qLs" secondAttribute="bottom" id="aMR-w1-Cnb"/>
-                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="leading" secondItem="eO6-pl-TqV" secondAttribute="leading" id="bQ7-DX-12y"/>
+                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="top" secondItem="41n-nQ-yLp" secondAttribute="top" id="4Cp-2y-WWK"/>
+                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="leading" secondItem="41n-nQ-yLp" secondAttribute="leading" id="8bX-FV-bKE"/>
+                        <constraint firstAttribute="bottom" secondItem="ySW-Dp-qLs" secondAttribute="bottom" id="aMR-w1-Cnb"/>
+                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="leading" secondItem="41n-nQ-yLp" secondAttribute="leading" id="bQ7-DX-12y"/>
                         <constraint firstItem="ySW-Dp-qLs" firstAttribute="top" secondItem="41n-nQ-yLp" secondAttribute="top" id="bs9-RH-ggZ"/>
-                        <constraint firstItem="eO6-pl-TqV" firstAttribute="trailing" secondItem="ySW-Dp-qLs" secondAttribute="trailing" id="jwr-tA-1kd"/>
-                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="trailing" secondItem="eO6-pl-TqV" secondAttribute="trailing" id="sjE-Us-tZu"/>
+                        <constraint firstAttribute="trailing" secondItem="ySW-Dp-qLs" secondAttribute="trailing" id="jwr-tA-1kd"/>
+                        <constraint firstItem="ySW-Dp-qLs" firstAttribute="trailing" secondItem="41n-nQ-yLp" secondAttribute="trailing" id="sjE-Us-tZu"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="ceH-4r-3Ce"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="eO6-pl-TqV"/>
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
