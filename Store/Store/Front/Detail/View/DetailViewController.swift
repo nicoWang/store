@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var contentViewHeight: NSLayoutConstraint!
     @IBOutlet private weak var descLabelHeight: NSLayoutConstraint!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var imageView: UIImageView!  {
@@ -86,7 +87,10 @@ private extension DetailViewController {
         brandLabel.text = item.brand
         likeLabel.text = item.favoriteCountFormatted
         titleLabel.text = item.title
-        descLabel.text = item.itemDetailDescription
+        if let desc = item.itemDetailDescription {
+            descLabelHeight.constant = desc.height(constraintedWidth: self.view.frame.width-30, font: UIFont.systemFont(ofSize: 15))
+            descLabel.text = desc
+        }
         if let old = item.price?.old {
             let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: old)
                 attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
@@ -96,7 +100,9 @@ private extension DetailViewController {
         newPriceLabel.text = item.price?.new
         dateLabel.text = item.expiration
         footLabel.text = item.redemptionsCap
+        scrollView.isScrollEnabled = true
         navigationButtons()
+        setScrollContentSize()
     }
     
     func navigationButtons() {
@@ -135,5 +141,24 @@ private extension DetailViewController {
     
     @objc func like() {
         presenter?.like()
+    }
+    
+    func setScrollContentSize() {
+        let imageH = imageView.frame.height
+        let spaceImage: CGFloat = 15
+        let brandHeight = brandLabel.frame.height
+        let spaceBrand: CGFloat = 15
+        let titleH = titleLabel.frame.height
+        let titleSpace: CGFloat = 15
+        let descHeight = descLabel.frame.height
+        let descSpace: CGFloat = 10
+        let priceH = priceTitleLabel.frame.height
+        let priceSpace: CGFloat = 10
+        let newPriceH = newPriceLabel.frame.height
+        let newPriceSpace: CGFloat = 10
+        let footLabelH = footLabel.frame.height
+        let total = imageH + spaceImage + brandHeight + spaceBrand + titleH + titleSpace + descHeight + descSpace + priceH + priceSpace + newPriceH + newPriceSpace + footLabelH + 10
+        contentViewHeight.constant = total
+        scrollView.contentSize = CGSize(width: view.frame.width, height: total)
     }
 }
