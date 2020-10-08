@@ -16,6 +16,7 @@ protocol ListPresenterProtocol: AnyObject {
     func didSelectItem(at index: IndexPath)
     func item(at index: IndexPath) -> Item?
     func title(by section: Int) -> String?
+    func title() -> String?
 }
 
 final class ListPresenter: ListPresenterProtocol {
@@ -62,6 +63,10 @@ final class ListPresenter: ListPresenterProtocol {
     func title(by section: Int) -> String? {
         guard let sections = store?.sections, sections.count > section else { return nil }
         return sections[section].title
+    }
+    
+    func title() -> String? {
+        return store?.title
     }
 }
 

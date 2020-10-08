@@ -26,6 +26,7 @@ class ListViewController: UIViewController {
 // MARK: - ListView
 extension ListViewController: ListView {
     func reload() {
+        title = presenter?.title()
         tableView.reloadData()
     }
 }
@@ -84,6 +85,5 @@ private extension ListViewController {
         tableView.separatorStyle = .none
         tableView.register(ListCell.self)
         presenter?.bind()
-        self.title = "Title"
     }
 }

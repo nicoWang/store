@@ -11,6 +11,8 @@
 		038E00EB252F6280009F901E /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E00EA252F6280009F901E /* DetailModule.swift */; };
 		038E00F4252F6FB8009F901E /* DetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E00F3252F6FB8009F901E /* DetailWireframe.swift */; };
 		038E00FC252F7E0A009F901E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038E00FB252F7E0A009F901E /* String.swift */; };
+		038E0101252F8EA6009F901E /* store.json in Resources */ = {isa = PBXBuildFile; fileRef = 038E0100252F8EA6009F901E /* store.json */; };
+		038E0106252F8ECA009F901E /* detail.json in Resources */ = {isa = PBXBuildFile; fileRef = 038E0105252F8ECA009F901E /* detail.json */; };
 		038EFE6F252F5908009F901E /* Loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038EFE6D252F5908009F901E /* Loader.xib */; };
 		038EFE70252F5908009F901E /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038EFE6E252F5908009F901E /* Loader.swift */; };
 		038EFF47252F5D6E009F901E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038EFF45252F5D6E009F901E /* DetailViewController.swift */; };
@@ -68,6 +70,8 @@
 		038E00EA252F6280009F901E /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
 		038E00F3252F6FB8009F901E /* DetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireframe.swift; sourceTree = "<group>"; };
 		038E00FB252F7E0A009F901E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		038E0100252F8EA6009F901E /* store.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = store.json; sourceTree = "<group>"; };
+		038E0105252F8ECA009F901E /* detail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail.json; sourceTree = "<group>"; };
 		038EFE6D252F5908009F901E /* Loader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Loader.xib; sourceTree = "<group>"; };
 		038EFE6E252F5908009F901E /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		038EFF45252F5D6E009F901E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,14 @@
 				038E00F3252F6FB8009F901E /* DetailWireframe.swift */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		038E010A252F8EF2009F901E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				03AB3F6B252E07F900563C50 /* StoreTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		038EFE6B252F58F6009F901E /* Common */ = {
@@ -242,7 +254,7 @@
 		03AB3F6A252E07F900563C50 /* StoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				03AB3F6B252E07F900563C50 /* StoreTests.swift */,
+				038E010A252F8EF2009F901E /* Tests */,
 				03AB3F6D252E07F900563C50 /* Info.plist */,
 			);
 			path = StoreTests;
@@ -263,6 +275,8 @@
 				03AB3F54252E07F700563C50 /* AppDelegate.swift */,
 				03AB3F56252E07F700563C50 /* SceneDelegate.swift */,
 				03AB3F5A252E07F700563C50 /* Main.storyboard */,
+				038E0100252F8EA6009F901E /* store.json */,
+				038E0105252F8ECA009F901E /* detail.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -522,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038E0106252F8ECA009F901E /* detail.json in Resources */,
 				03AB3F61252E07F900563C50 /* LaunchScreen.storyboard in Resources */,
 				03AB3F5E252E07F900563C50 /* Assets.xcassets in Resources */,
 				038EFF48252F5D6E009F901E /* DetailViewController.xib in Resources */,
@@ -529,6 +544,7 @@
 				03AB416F252E1A0A00563C50 /* ListViewController.xib in Resources */,
 				03AB3F5C252E07F700563C50 /* Main.storyboard in Resources */,
 				03AB4179252E1A6800563C50 /* ListCell.xib in Resources */,
+				038E0101252F8EA6009F901E /* store.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
