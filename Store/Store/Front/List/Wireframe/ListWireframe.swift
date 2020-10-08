@@ -20,7 +20,7 @@ class ListWireframe: ListWireframeProtocol {
     
     func pushToDetail(with item: ItemDetail) {
         let module = DetailModule()
-        let view = module.detailView(with: item)
+        let view = module.detailView(with: item, navigation: navigation)
         navigation?.pushViewController(view, animated: true)
     }
 }

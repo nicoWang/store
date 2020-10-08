@@ -12,10 +12,14 @@ struct ItemDetail: Codable {
     var id: Int?
     var imageURL: String?
     var brand, title, tags: String?
-    var favoriteCount: Int?
+    var favoriteCount: Double?
     var itemDetailDescription: String?
     var price: Price?
     var expiration, redemptionsCap: String?
+    
+    var favoriteCountFormatted: String {
+        return favoriteCount?.kmFormatted ?? "0"
+    }
 
     enum CodingKeys: String, CodingKey {
         case id
